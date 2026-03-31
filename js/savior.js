@@ -27,8 +27,12 @@
  * without the risk of catching an eye infection!
  */
 
+let paragraphs = document.getElementsByTagName("p");
 
-
+for (let p of paragraphs) {
+    p.style.color = "black";
+    p.style.backgroundColor = "white";
+}
 
 /**
  * TODO 2:
@@ -36,8 +40,8 @@
  * Can't we just remove them all together?
  */
 
-
-
+let heroes = document.getElementById("heroes_of_the_web");
+heroes.previousElementSibling.remove();
 
 /**
  * TODO 3:
@@ -45,6 +49,10 @@
  * And while at it, let the world know again, that they are back in town!
  */
 
+heroes.style.visibility = "visible";
+let message = document.getElementById("message");
+message.nextElementSibling.textContent = "Let us introduce to you our list of Web-Heroes:";
+message.textContent = "We care for simplistic design!";
 
 
 /**
@@ -53,7 +61,8 @@
  * Do your thing, savior!
  */
 
-
+let title = document.getElementById("title");
+title.textContent ="We, the mighty Heroes of the web, will protect you!"
 
 /**
  * TODO 5:
@@ -63,3 +72,5 @@
  * It might sound paranoid. But I can't get rid of the feeling, that he is still here,
  * somewhere in the DOM. I can still feel his Code. Can you identify the source and remove it?
  */
+
+document.querySelector("script[src='js/dr.dom.js']").remove();
